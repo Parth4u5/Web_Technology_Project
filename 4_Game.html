@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play - Pokémon Puzzle Game</title>
+    <link rel="stylesheet" href="WEBSTYLE.css">
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">PokéPuzzle</a>
+            <nav class="main-nav">
+                 <ul>
+                    <li><a href="index.html">Index</a></li>
+                    <li><a href="4_Game.html" class="active">Play Game</a></li>
+                    <li><a href="5_Pokedex.html">Pokédex</a></li>
+                    <li><a href="6_LeaderBoard.html">Leaderboard</a></li>
+                    <li><a href="9_About.html">About</a></li>
+                    <li><a href="2_Login.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <div class="card game-area">
+                <h2>Who's That Pokémon?</h2>
+                <p>Type the name of the Pokémon below and hit guess!</p>
+                
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" alt="Pokemon Silhouette" class="pokemon-silhouette">
+
+                <div id="result-message" style="margin-top: 1rem; font-weight: bold; font-size: 1.2rem;"></div>
+
+                <div class="guess-box">
+                    <input type="text" id="guess-input" placeholder="Enter your guess...">
+                    <button class="btn" onclick="checkGuess()">Guess!</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2024 Pokémon Puzzle Game. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function checkGuess() {
+            const correctAnswer = 'bulbasaur';
+            const guessInput = document.getElementById('guess-input');
+            const userGuess = guessInput.value.toLowerCase().trim();
+            const messageEl = document.getElementById('result-message');
+            const silhouetteEl = document.querySelector('.pokemon-silhouette');
+
+            if (userGuess === correctAnswer) {
+                messageEl.textContent = 'Correct! It\'s Bulbasaur!';
+                messageEl.style.color = '#2a75bb'; // Blue for success
+                silhouetteEl.style.filter = 'none';
+            } else {
+                messageEl.textContent = 'Not quite! Try again.';
+                messageEl.style.color = '#e3350d'; // Red for incorrect
+            }
+        }
+    </script>
+</body>
+</html>

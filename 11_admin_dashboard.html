@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - PokéPuzzle</title>
+    <link rel="stylesheet" href="WEBSTYLE.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <a href="11_admin_dashboard.html" class="logo">PokéPuzzle Admin</a>
+            <nav class="main-nav">
+                 <ul>
+                    <li><a href="11_admin_dashboard.html" class="active">Dashboard</a></li>
+                    <li><a href="13_admin_user.html">Manage Users</a></li>
+                    <li><a href="15_admin_puzzles.html">Manage Puzzles</a></li>
+                    <li><a href="14_admin_leaderboard.html">Manage Leaderboard</a></li>
+                    <li><a href="12_Admin_Settings.html">Site Settings</a></li>
+                    <li><a href="1_Home.html">View Site</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="card">
+                <h2>Admin Dashboard</h2>
+                <p>Welcome, Admin! Here is a summary of your website's activity.</p>
+                
+                <div class="stats-grid" style="display: flex; gap: 1rem; margin: 2rem 0;">
+                    <div class="stat-card" style="flex-grow: 1; border: 3px solid var(--primary-color); padding: 1rem; border-radius: 5px; text-align: center;">
+                        <h3>Total Users</h3>
+                        <p style="font-size: 2rem; font-weight: bold;">152</p>
+                    </div>
+                    <div class="stat-card" style="flex-grow: 1; border: 3px solid var(--primary-color); padding: 1rem; border-radius: 5px; text-align: center;">
+                        <h3>Puzzles in Game</h3>
+                        <p style="font-size: 2rem; font-weight: bold;">45</p>
+                    </div>
+                     <div class="stat-card" style="flex-grow: 1; border: 3px solid var(--primary-color); padding: 1rem; border-radius: 5px; text-align: center;">
+                        <h3>Games Played Today</h3>
+                        <p style="font-size: 2rem; font-weight: bold;">834</p>
+                    </div>
+                </div>
+
+                <h3>Quick Actions</h3>
+                <a href="11_admin_users.html" class="btn">Manage Users</a>
+                <a href="12_admin_puzzles.html" class="btn">Add a New Puzzle</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2024 Pokémon Puzzle Game. Admin Panel.</p>
+        </div>
+    </footer>
+</body>
+</html>

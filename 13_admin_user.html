@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Users - PokéPuzzle Admin</title>
+    <link rel="stylesheet" href="WEBSTYLE.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <a href="11_admin_dashboard.html" class="logo">PokéPuzzle Admin</a>
+            <nav class="main-nav">
+                 <ul>
+                    <li><a href="11_admin_dashboard.html">Dashboard</a></li>
+                    <li><a href="13_admin_user.html" class="active">Manage Users</a></li>
+                    <li><a href="15_admin_puzzles.html">Manage Puzzles</a></li>
+                    <li><a href="14_admin_leaderboard.html">Manage Leaderboard</a></li>
+                    <li><a href="12_Admin_Settings.html">Site Settings</a></li>
+                    <li><a href="1_Home.html">View Site</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="card">
+                <h2>User Management</h2>
+                <p>View, edit, or delete registered users.</p>
+                <table class="leaderboard-table">
+                    <thead>
+                        <tr>
+                            <th>User ID</th>
+                            <th>Username</th>
+                            <th>Email</th>
+                            <th>Date Registered</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>AshKetchum1</td>
+                            <td>ash@email.com</td>
+                            <td>2024-09-15</td>
+                            <td><button class="btn">Edit</button> <button class="btn btn-danger">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>MistyFan</td>
+                            <td>misty@email.com</td>
+                            <td>2024-09-14</td>
+                            <td><button class="btn">Edit</button> <button class="btn btn-danger">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>BrockSolid</td>
+                            <td>brock@email.com</td>
+                            <td>2024-09-14</td>
+                            <td><button class="btn">Edit</button> <button class="btn btn-danger">Delete</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2024 Pokémon Puzzle Game. Admin Panel.</p>
+        </div>
+    </footer>
+</body>
+</html>
