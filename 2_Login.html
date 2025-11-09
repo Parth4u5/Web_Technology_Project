@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="3_Register.html">
 </head>
 <body>
-    <!-- Header with Navigation -->
     <header class="main-header">
         <div class="container">
             <a href="index.html" class="logo">PokéPuzzle</a>
@@ -25,13 +24,12 @@
         </div>
     </header>
 
-    <!-- Main Content -->
     <main>
         <div class="container">
             <div class="form-container">
                 <div class="card">
                     <h2>Trainer Login</h2>
-                    <form>
+                    <form onsubmit="return validateLogin()">
                         <div class="form-group" style="animation-delay: 0.1s;">
                             <label for="username">Username</label>
                             <input type="text" id="username" name="username" required placeholder="Enter your username">
@@ -50,11 +48,27 @@
         </div>
     </main>
 
-    <!-- Footer -->
     <footer class="main-footer">
         <div class="container">
             <p>&copy; 2024 Pokémon Puzzle Game. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        function validateLogin() {
+            // Get values from the form fields
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // Check if fields are empty
+            if (username.trim() === '' || password.trim() === '') {
+                alert('Please enter both username and password.');
+                return false; // Prevents the form from submitting
+            }
+
+            // If all checks pass
+            return true; // Allows the form to submit
+        }
+    </script>
 </body>
 </html>
